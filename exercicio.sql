@@ -36,4 +36,9 @@ order by preco
 
 update Produto set preco = 10 where nome='Rodo de Pia'
 
+-----------------------
+select *
+from Produto 
+order by id
+
 delete from produto where id=4
