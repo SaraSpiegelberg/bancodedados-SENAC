@@ -30,6 +30,3 @@ select Nome,Cargo from Funcionario where cargo = 'Desenvolvedor'
 update Funcionario set cargo = 'Gerente' where id=21
 
 delete from Funcionario where id =26
-
-
-
