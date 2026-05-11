@@ -27,12 +27,27 @@ INSERT INTO Pedido (nome_cliente, data_pedido, valor_total, status_pedido, forma
 ('Natan Gomes', '2026-05-11 21:30:00', 63.50, 'Entregue', 'Vale Refeição', 'Pimenta extra'),
 ('Olívia Martins', '2026-05-11 22:00:00', 115.00, 'Preparando', 'Dinheiro', 'Troco para 50 reais');
 
-
-
-
 select * from pedido order by valor_total desc
 
-update produto set valor = '100' where id=11
+update pedido set valor = '100' where id=11
 
-delete from produto where valor_total =< 20
+DELETE FROM pedido WHERE valor_total < 100
+
+select nome_cliente, data_pedido, valor_total 
+from pedido
+where data_pedido 
+between '2025-01-01' and '2025-12-31' order by valor_total desc 
+
+select * from pedido where forma_pagamento ='Pix' order by data_pedido asc 
+
+
+select * from pedido where observacao  ='Urgente'
+
+SELECT *FROM pedido ORDER BY valor_total desc LIMIT 2
+
+
+
+
+
+
 
