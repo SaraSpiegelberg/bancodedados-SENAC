@@ -38,10 +38,10 @@ from pedido
 where data_pedido 
 between '2025-01-01' and '2025-12-31' order by valor_total desc 
 
-select * from pedido where forma_pagamento ='Pix' order by data_pedido asc 
+select * from pedido where forma_pagamento ='Pix' order by data_pedido desc
 
 
-select * from pedido where observacao  ='Urgente'
+select * from pedido where observacao  like '%Urgente%' ----- que contém a palavra urgente!
 
 SELECT *FROM pedido ORDER BY valor_total desc LIMIT 2
 
