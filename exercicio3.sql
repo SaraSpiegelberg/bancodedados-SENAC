@@ -43,9 +43,7 @@ select * from pedido where forma_pagamento ='Pix' order by data_pedido desc
 
 select * from pedido where observacao  like '%Urgente%' ----- que contém a palavra urgente!
 
-SELECT *FROM pedido ORDER BY valor_total desc LIMIT 2
-
-
+SELECT *FROM pedido ORDER BY valor_total desc LIMIT 2 --- Limita a pesquisa a dois
 
 
 
