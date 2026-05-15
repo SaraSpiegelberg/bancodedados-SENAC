@@ -78,14 +78,16 @@ VALUES
 
 -------------------------------- LÊ DADOS -----------------------------------
 SELECT 
-    p.pedido_ID, 
-    u.Nome, 
-    p.data_pedido, 
-    p.valor_total,
-    s.Status,
-    p.observacao
+    p.pedido_ID as "ID do Pedido", 
+    u.Nome as "Cliente", 
+    p.data_pedido as "Data do Pedido", 
+    p.valor_total as "Valor Total",
+    f.nome as "Forma de Pagamento",
+    s.Status as "Status do Pedido",
+    p.observacao as "Observação"
 FROM pedido p
 INNER JOIN usuario u ON p.usuario_ID = u.ID 
+INNER JOIN forma_pagamento f ON p.forma_pagamento_ID = f.ID 
 INNER JOIN status s ON p.status_pedido_ID = s.statusID
 ORDER BY u.Nome ASC
 
